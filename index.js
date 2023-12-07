@@ -3,7 +3,8 @@
 const express = require('express');
 const jobRoutes = require('./routes/jobRoutes');
 const app = express();
-const port = 3000;
+
+const port = process.env.PORT || 3000;
 require('dotenv').config()
 app.use(express.json());
 app.use('/api', jobRoutes);
